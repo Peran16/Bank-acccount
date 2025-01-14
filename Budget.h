@@ -21,7 +21,9 @@ public:
     //Adds a Transaction to a specific Category
     void addTransaction(const string& categoryName, shared_ptr<Transaction> transaction); //shared_ptr to ensure is prop managed
     //To generate a report
-    void generateReport() const;
+    void generateReport() const; // Full report
+    void generateReport(bool detailed) const; // Detailed or resumed
+
 };
 
 #endif
