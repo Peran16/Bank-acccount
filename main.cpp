@@ -24,6 +24,8 @@ int main() {
 
     //And finally I generate the report of my Budget
     myBudget.generateReport();
+    myBudget.generateReport(true);   
+
 
     return 0;
 }
