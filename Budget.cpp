@@ -39,3 +39,18 @@ void Budget::generateReport() const {
     cout << "Savings: " << (incomeTotal - expenseTotal) << endl;
     cout << "Saving Goal: " << savingGoal << endl;
 }
+
+//Detailed
+void Budget::generateReport(bool detailed) const {
+    if (detailed) {
+        for (const auto& category : categories) {
+            category.displayTransactions();
+        }
+    }
+    cout << "--- Summary Report ---\n";
+    cout << "Income Total: " << incomeTotal << endl;
+    cout << "Expense Total: " << expenseTotal << endl;
+    cout << "Savings: " << (incomeTotal - expenseTotal) << endl;
+    cout << "Saving Goal: " << savingGoal << endl;
+}
+
